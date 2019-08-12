@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Câu 2:
+        // Cho danh sách các số nguyên ở trong một mảng. Viết hàm listPrimes() với đầu vào là mảng số nguyên và đầu ra là một mảng mới chứa các số là nguyên tố thuộc mảng đã cho.
+
+        let array = [2, 4, 5, 6, 8];
+        let newArray = [];
+        let x = 0;
+        for(let i = 0 ; i < array.length ;i++)
+        {
+            if(listPrimes(array[i]) == true)
+            {
+                newArray[x] = array[i];
+                x++;
+            }
+        }
+        console.log(newArray);
+        function listPrimes(num) {
+
+            if(num <= 2)
+            {
+                return true;
+            }
+            else if(num % 2==0)
+            {
+                return false;
+            }
+            else if(num % 2 !=0)
+            {
+                for(let i = 3 ; i <= Math.sqrt(num) ;i=i+2)
+                {
+                    if(num % i ==0)
+                    {
+                        return false;
+                        break;
+                    }
+                }
+            }
+            return true;
+        }
+
+
+    </script>
+</body>
+
+</html>

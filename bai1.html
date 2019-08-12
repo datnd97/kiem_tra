@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+    // Câu 1:
+// Viết hàm isPrime() kiểm tra 1 số có phải là số nguyên tố hay không.
+// Đầu vào là một số nguyên và đầu ra là 1 giá trị kiểu boolean (Nếu số nguyên là số nguyên tố thì kết quả là true, ngược lại là false).
+        let input = 9;
+        console.log(isPrime(input));
+
+
+        
+        function isPrime(num)
+        {
+            if(num <= 2)
+            {
+                return true;
+            }
+            else if(num % 2==0)
+            {
+                return false;
+            }
+            else if(num % 2 !=0)
+            {
+                for(let i = 3 ; i <= Math.sqrt(num) ;i=i+2)
+                {
+                    if(num % i ==0)
+                    {
+                        return false;
+                        break;
+                    }
+                }
+            }
+            return true;
+        }
+
+
+    </script>
+</body>
+
+</html>

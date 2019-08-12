@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Câu 3:
+        // Viết hàm sumDiagonal() tính tổng đường chéo chính của một ma trận vuông (là mảng 2 chiều có số hàng và cột bằng nhau).
+        // Đầu vào là mảng 2 chiều, và đầu ra là tổng các số nguyên nằm trên đường chéo của mảng đầu vào đó.
+        let array =
+
+            [[1, 2, 3],
+            [3, 4, 5],
+            [6, 7, 8]];
+    
+        function sumDiagonal1(array) {
+            let tong = 0;
+            for (let i = 0; i < array.length; i++) {
+                for (let j = 0; j < array[i].length; j++) {
+                    if (i == j) {
+                        tong += array[i][j];
+                    }
+
+                }
+            }
+            return tong;
+        }
+        function sumDiagonal2(array) {
+            let tong = 0;
+            for (let i = 0; i < array.length; i++) {
+                for (let j = array[i].length; j >= 0; j--) {
+                    if (i == j) {
+                        tong += array[i][j];
+                    }
+                }
+            }
+            return tong;
+        }
+        console.log(sumDiagonal1(array));
+        console.log(sumDiagonal2(array));
+
+      
+
+        console.log(b);
+        // let tong = 0;
+        // let first = 0;
+        // let last  = b.length-1;
+        // while(first < last)
+        // {
+        //     tong = b[first] + b[last];
+
+        //     first++;
+        //     last--;
+
+        // }
+        // console.log(tong);
+
+
+    </script>
+</body>
+
+</html>
